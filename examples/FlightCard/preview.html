@@ -1,0 +1,32 @@
+<!-- @dsCard group="Vuelos" height=620 subtitle="Tarjeta de resultado con explicación de la IA" -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>FlightCard — preview</title></head>
+<body>
+<div id="root" class="pj-stage" style="flex-direction:column"></div>
+<script>
+var P = window.Pajaro, h = React.createElement;
+ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+  h(P.FlightCard, {
+    recommended: true, label: 'Mejor opción',
+    airline: 'Aerolíneas Argentinas', flightNumber: 'AR1132',
+    from: 'EZE', to: 'MAD', depart: '13:35', arrive: '06:10', dayShift: '+1', duration: '12 h 35 min', stops: 0,
+    price: '$ 1.412.300', priceNote: 'Final por persona, con impuestos',
+    reasons: [
+      { title: 'Directo y 3 h 15 min más corto', detail: 'que la opción más barata.' },
+      { title: 'Solo $ 113.400 más', detail: 'para evitar una escala de 4 h en San Pablo.' },
+      { title: '18% debajo del promedio', detail: 'de esta ruta para noviembre.' },
+      { title: 'Cambio sin cargo', detail: 'hasta 7 días antes de volar.' }
+    ],
+    basis: 'Comparamos 214 vuelos de 9 aerolíneas con precio final.',
+    baggage: 'Mano + 1 valija de 23 kg', cta: 'Elegir este vuelo'
+  }),
+  h(P.FlightCard, {
+    label: 'Más barato', airline: 'LATAM', flightNumber: 'LA8070',
+    from: 'EZE', to: 'MAD', depart: '09:20', arrive: '07:15', dayShift: '+1', duration: '15 h 55 min', stops: 1, stopsAt: ['GRU'],
+    price: '$ 1.298.900', baggage: 'Solo equipaje de mano'
+  })
+));
+</script>
+</body>
+</html>

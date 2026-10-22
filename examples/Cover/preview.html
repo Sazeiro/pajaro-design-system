@@ -1,0 +1,50 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Pájaro</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .cielo { fill:var(--brand-cielo); }
+  .sol { fill:var(--brand-sol); }
+  .tint { fill:var(--cielo-soft); }
+  .deep { fill:var(--ink); }
+  .wing { fill:var(--cielo); }
+  .wing-sol { fill:var(--brand-sol); }
+  .blk { rx:var(--radius-lg); }
+  .words { position:absolute; left:var(--space-8); bottom:var(--space-8); max-width:440px; }
+  .name { margin:0; font-size:120px; line-height:.92; font-weight:600; letter-spacing:-.045em; color:var(--ink); }
+  .tag { margin:var(--space-3) 0 0 6px; font-size:14px; line-height:20px; color:var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      brand-cielo 208x272 slab bled off the top (the identity, largest) · brand-sol quarter-disc r96 rising from the slab's foot (the sun) · cielo-soft 128x176 tint · ink 120x216 bled off the right edge — about 38% of 960x288
+  arrangement one tall cielo slab with satellites, bottoms on one line space-8 above the edge, space-4 gutters
+  pattern     quarter-circle "wings" from the mark's arc-built leading edge (brand: a bird drawn from arcs): r24 sectors at a space-8 pitch on the tint, two lit in sol on the ink block
+  scales      gutters space-4; pitch space-8; sector r = space-6; corners radius-lg
+-->
+<rect class="cielo blk" x="0" y="-16" width="208" height="272" rx="16"/>
+<path class="sol" d="M0 256 L0 160 A96 96 0 0 1 96 256 Z"/>
+<rect class="tint blk" x="224" y="80" width="128" height="176" rx="16"/>
+<rect class="deep blk" x="368" y="40" width="128" height="216" rx="16"/>
+<path class="wing" d="M240 128 L240 104 A24 24 0 0 1 264 128 Z"/><path class="wing" d="M272 128 L272 104 A24 24 0 0 1 296 128 Z"/><path class="wing" d="M304 128 L304 104 A24 24 0 0 1 328 128 Z"/><path class="wing" d="M240 160 L240 136 A24 24 0 0 1 264 160 Z"/><path class="wing" d="M272 160 L272 136 A24 24 0 0 1 296 160 Z"/><path class="wing" d="M304 160 L304 136 A24 24 0 0 1 328 160 Z"/><path class="wing" d="M240 192 L240 168 A24 24 0 0 1 264 192 Z"/><path class="wing" d="M272 192 L272 168 A24 24 0 0 1 296 192 Z"/><path class="wing" d="M304 192 L304 168 A24 24 0 0 1 328 192 Z"/><path class="wing" d="M240 224 L240 200 A24 24 0 0 1 264 224 Z"/><path class="wing" d="M272 224 L272 200 A24 24 0 0 1 296 224 Z"/><path class="wing" d="M304 224 L304 200 A24 24 0 0 1 328 224 Z"/>
+<path class="wing-sol" d="M392 88 L392 64 A24 24 0 0 1 416 88 Z"/>
+<path class="wing-sol" d="M424 120 L424 96 A24 24 0 0 1 448 120 Z"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name">Pájaro</h1>
+<p class="tag">Viajar desde LATAM, sin fricción.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- @dsCard group="Alertas" height=560 subtitle="Alerta con veredicto ¿compro o espero?" -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>PriceAlert — preview</title></head>
+<body>
+<div id="root" class="pj-stage"></div>
+<script>
+var P = window.Pajaro, h = React.createElement;
+ReactDOM.createRoot(document.getElementById('root')).render(h(React.Fragment, null,
+  h(P.PriceAlert, {
+    from: 'EZE', to: 'MIA', trip: 'Ida y vuelta', dates: '12 – 26 ene · 1 adulto',
+    price: 'US$ 742', change: '−14%', direction: 'down', since: 'desde que creaste la alerta',
+    history: [880, 872, 890, 905, 896, 884, 870, 878, 862, 851, 858, 840, 826, 818, 806, 790, 774, 760, 751, 742], typical: 860, typicalLabel: 'US$ 860',
+    verdict: 'buy', verdictText: 'Es el precio más bajo en 60 días y para estas fechas suele subir a medida que se acerca enero.', confidence: 82
+  }),
+  h(P.PriceAlert, {
+    from: 'AEP', to: 'BRC', trip: 'Ida y vuelta', dates: 'Fines de semana de julio',
+    price: '$ 289.400', change: '+9%', direction: 'up', since: 'esta semana',
+    history: [262, 258, 266, 270, 268, 274, 279, 276, 283, 281, 287, 289.4], typical: 255, typicalLabel: '$ 255.000',
+    verdict: 'wait', verdictText: 'Esta ruta suele bajar entre 6 y 8 semanas antes de salir. Te avisamos apenas baje de $ 250.000.', confidence: 68,
+    updated: 'Actualizado hace 12 min'
+  })
+));
+</script>
+</body>
+</html>

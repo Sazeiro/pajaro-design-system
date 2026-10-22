@@ -1,0 +1,26 @@
+<!-- @dsCard group="IA" height=700 subtitle="Conversación con el copiloto" -->
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><title>AIChat — preview</title></head>
+<body>
+<div id="root" class="pj-stage"></div>
+<script>
+var P = window.Pajaro, h = React.createElement;
+ReactDOM.createRoot(document.getElementById('root')).render(h(P.AIChat, {
+  subtitle: 'Copiloto de cancelaciones y reembolsos',
+  messages: [
+    { role: 'user', text: 'Me cancelaron el AR1132 a Madrid del viernes. ¿Qué hago?' },
+    { role: 'ai', text: 'Como la cancelación fue de la aerolínea, podés elegir sin cargo entre reprogramar o pedir el reembolso total. Te dejo las dos opciones:',
+      options: [
+        { title: 'Reprogramar al sábado', detail: 'AR1132 · sale 13:35 · tu asiento 23A sigue libre', value: 'Sin costo', recommended: true },
+        { title: 'Reembolso total', detail: 'A tu tarjeta en 7 a 15 días hábiles', value: '$ 1.412.300' }
+      ],
+      note: 'Lo saqué de las condiciones de tu tarifa. Si elegís una, la gestiono yo.' },
+    { role: 'user', text: 'Reprogramá al sábado.' }
+  ],
+  thinking: true,
+  suggestions: ['¿Me cubren el hotel?', 'Prefiero el reembolso', 'Ver otras fechas']
+}));
+</script>
+</body>
+</html>
